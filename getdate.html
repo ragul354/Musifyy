@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Time</title>
+</head>
+<body>
+    <h1 id="timeDisplay"></h1>
+    <h1 id="dateDisplay"></h1>
+    <script>
+        const currentDate = new Date().toDateString();
+        document.getElementById('dateDisplay').innerHTML = currentDate;
+        function showTime() {
+            const currentTime = new Date().toLocaleTimeString();
+            document.getElementById('timeDisplay').innerHTML = currentTime;
+        }
+        showTime();
+        setInterval(showTime, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hide n displaynone</title>
+        <style>
+            h2{
+                text-align: center;
+                background-color:gold;
+                border: 2px solid grey;
+                margin: 10px 400px;
+            }
+            .imagebox{
+                float: left;
+                padding: 10px;
+                text-align: center;
+            }
+            
+            html{
+                background-color: salmon;
+            }
+            button{
+                background-color:chartreuse;
+                padding: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                box-shadow: 10px 10px 10px rgba(4, 4, 4, 0.762);
+            }
+            .button:hover{
+                background-color: rgb(156, 255, 57);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>This Topic is about hiding the image and display:none properties</h2>
+        <ul>
+            <li>
+                <p><b>First Topic:- Visibility: Hidden property</b></p>
+                <p>In this property the image or the content will be hidden from the page, but it contains space.</p>
+            </li>
+            <li>
+                <p><b>Second Topic:- Display: None</b></p>
+                <p>In this property the image or the content will be deleted from the page and doesn't occupy any space</p>
+            </li>
+        </ul>
+        <div class="imagebox" id="image1">
+            <img width=500px src="https://cdn.pixabay.com/photo/2024/06/11/15/53/assassin-8823528_1280.png" alt="assasin"><br>
+            <button class="button" onclick="deletecontent()">Delete button</button>
+        </div>
+        <div class="imagebox" id="image2">
+            <img width=400px height=280px src="https://img.freepik.com/free-photo/vector-illustration-floral-design-coming-out-from-firecracker-happy-diwali_123827-28205.jpg?ga=GA1.1.848147030.1740491203&semt=ais_hybrid" alt="design"><br>
+            <button class="button" onclick="hidecontent()">Hide Button</button>
+        </div>
+        <div class="imagebox">
+            <img height=280px src="https://th.bing.com/th/id/OIP.ZN3rZUFb070p4v4g2BmAFQHaLH?w=118&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Magic"><br>
+            <button class="button"onclick="reset()">Do Magic</button>
+        </div>
+        <script>
+            function deletecontent(){
+                document.getElementById("image1").style.display="none";
+            }
+            function hidecontent(){
+                document.getElementById("image2").style.visibility="hidden";
+            }
+            function reset(){
+                document.getElementById("image1").style.display="block";
+                document.getElementById("image2").style.visibility="visible";
+            }
+        </script>
+        
+    </body>
+</html>
